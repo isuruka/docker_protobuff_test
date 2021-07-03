@@ -18,10 +18,6 @@ message Customer {
  string nationality=10;
  }
 
-message CustomerGetRequest {
- string name=1;
-} 
-
 message ListCustomerResponse {
  repeated Customer Customer = 1;
  } 
@@ -32,6 +28,10 @@ message CustomerUpdateRequest {
 
 message CustomerAddRequest {
  Customer Customer=1;
+} 
+
+message CustomerGetRequest {
+ string name=1;
 } 
 
 service Service{
