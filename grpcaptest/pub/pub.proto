@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+ package pub;
+ option go_package = ".;pub";
+import "google/protobuf/empty.proto";
+
+message Customer {
+
+ int64 id=1;
+ string createdat=2;
+ string updatedat=3;
+ string deletedat=4;
+ string nic=5;
+ string name=6;
+ string address=7;
+ string email=8;
+ string contact=9;
+ string nationality=10;
+ }
+
+message CustomerAddRequest {
+ Customer Customer=1;
+} 
+
+message CustomerGetRequest {
+ string name=1;
+} 
+
+message ListCustomerResponse {
+ repeated Customer Customer = 1;
+ } 
+
+message CustomerUpdateRequest {
+ Customer Customer=1;
+} 
+
+service Service{
+ 
+rpc CustomerAdd(CustomerAddRequest) returns (Customer) {} 
+rpc CustomerDelete(google.protobuf.Empty) returns (Customer) {} 
+rpc CustomerGet(CustomerGetRequest) returns (Customer) {} 
+rpc CustomerGetAll(google.protobuf.Empty) returns (ListCustomerResponse) {} 
+rpc CustomerUpdate(CustomerUpdateRequest) returns (Customer) {}
+ }
