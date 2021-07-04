@@ -145,6 +145,53 @@ func (x *Customer) GetNationality() string {
 	return ""
 }
 
+type CustomerUpdateRequest struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Customer *Customer `protobuf:"bytes,1,opt,name=Customer,proto3" json:"Customer,omitempty"`
+}
+
+func (x *CustomerUpdateRequest) Reset() {
+	*x = CustomerUpdateRequest{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_pub_proto_msgTypes[1]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *CustomerUpdateRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*CustomerUpdateRequest) ProtoMessage() {}
+
+func (x *CustomerUpdateRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_pub_proto_msgTypes[1]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use CustomerUpdateRequest.ProtoReflect.Descriptor instead.
+func (*CustomerUpdateRequest) Descriptor() ([]byte, []int) {
+	return file_pub_proto_rawDescGZIP(), []int{1}
+}
+
+func (x *CustomerUpdateRequest) GetCustomer() *Customer {
+	if x != nil {
+		return x.Customer
+	}
+	return nil
+}
+
 type CustomerAddRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -156,7 +203,7 @@ type CustomerAddRequest struct {
 func (x *CustomerAddRequest) Reset() {
 	*x = CustomerAddRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pub_proto_msgTypes[1]
+		mi := &file_pub_proto_msgTypes[2]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -169,7 +216,7 @@ func (x *CustomerAddRequest) String() string {
 func (*CustomerAddRequest) ProtoMessage() {}
 
 func (x *CustomerAddRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_pub_proto_msgTypes[1]
+	mi := &file_pub_proto_msgTypes[2]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -182,7 +229,7 @@ func (x *CustomerAddRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CustomerAddRequest.ProtoReflect.Descriptor instead.
 func (*CustomerAddRequest) Descriptor() ([]byte, []int) {
-	return file_pub_proto_rawDescGZIP(), []int{1}
+	return file_pub_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *CustomerAddRequest) GetCustomer() *Customer {
@@ -203,7 +250,7 @@ type CustomerGetRequest struct {
 func (x *CustomerGetRequest) Reset() {
 	*x = CustomerGetRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pub_proto_msgTypes[2]
+		mi := &file_pub_proto_msgTypes[3]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -216,7 +263,7 @@ func (x *CustomerGetRequest) String() string {
 func (*CustomerGetRequest) ProtoMessage() {}
 
 func (x *CustomerGetRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_pub_proto_msgTypes[2]
+	mi := &file_pub_proto_msgTypes[3]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -229,7 +276,7 @@ func (x *CustomerGetRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CustomerGetRequest.ProtoReflect.Descriptor instead.
 func (*CustomerGetRequest) Descriptor() ([]byte, []int) {
-	return file_pub_proto_rawDescGZIP(), []int{2}
+	return file_pub_proto_rawDescGZIP(), []int{3}
 }
 
 func (x *CustomerGetRequest) GetName() string {
@@ -250,7 +297,7 @@ type ListCustomerResponse struct {
 func (x *ListCustomerResponse) Reset() {
 	*x = ListCustomerResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_pub_proto_msgTypes[3]
+		mi := &file_pub_proto_msgTypes[4]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -263,7 +310,7 @@ func (x *ListCustomerResponse) String() string {
 func (*ListCustomerResponse) ProtoMessage() {}
 
 func (x *ListCustomerResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_pub_proto_msgTypes[3]
+	mi := &file_pub_proto_msgTypes[4]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -276,57 +323,10 @@ func (x *ListCustomerResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ListCustomerResponse.ProtoReflect.Descriptor instead.
 func (*ListCustomerResponse) Descriptor() ([]byte, []int) {
-	return file_pub_proto_rawDescGZIP(), []int{3}
-}
-
-func (x *ListCustomerResponse) GetCustomer() []*Customer {
-	if x != nil {
-		return x.Customer
-	}
-	return nil
-}
-
-type CustomerUpdateRequest struct {
-	state         protoimpl.MessageState
-	sizeCache     protoimpl.SizeCache
-	unknownFields protoimpl.UnknownFields
-
-	Customer *Customer `protobuf:"bytes,1,opt,name=Customer,proto3" json:"Customer,omitempty"`
-}
-
-func (x *CustomerUpdateRequest) Reset() {
-	*x = CustomerUpdateRequest{}
-	if protoimpl.UnsafeEnabled {
-		mi := &file_pub_proto_msgTypes[4]
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		ms.StoreMessageInfo(mi)
-	}
-}
-
-func (x *CustomerUpdateRequest) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*CustomerUpdateRequest) ProtoMessage() {}
-
-func (x *CustomerUpdateRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_pub_proto_msgTypes[4]
-	if protoimpl.UnsafeEnabled && x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-// Deprecated: Use CustomerUpdateRequest.ProtoReflect.Descriptor instead.
-func (*CustomerUpdateRequest) Descriptor() ([]byte, []int) {
 	return file_pub_proto_rawDescGZIP(), []int{4}
 }
 
-func (x *CustomerUpdateRequest) GetCustomer() *Customer {
+func (x *ListCustomerResponse) GetCustomer() []*Customer {
 	if x != nil {
 		return x.Customer
 	}
@@ -355,20 +355,20 @@ var file_pub_proto_rawDesc = []byte{
 	0x6e, 0x74, 0x61, 0x63, 0x74, 0x18, 0x09, 0x20, 0x01, 0x28, 0x09, 0x52, 0x07, 0x63, 0x6f, 0x6e,
 	0x74, 0x61, 0x63, 0x74, 0x12, 0x20, 0x0a, 0x0b, 0x6e, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x61, 0x6c,
 	0x69, 0x74, 0x79, 0x18, 0x0a, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0b, 0x6e, 0x61, 0x74, 0x69, 0x6f,
-	0x6e, 0x61, 0x6c, 0x69, 0x74, 0x79, 0x22, 0x3f, 0x0a, 0x12, 0x43, 0x75, 0x73, 0x74, 0x6f, 0x6d,
-	0x65, 0x72, 0x41, 0x64, 0x64, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x29, 0x0a, 0x08,
-	0x43, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x0d,
-	0x2e, 0x70, 0x75, 0x62, 0x2e, 0x43, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x52, 0x08, 0x43,
-	0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x22, 0x28, 0x0a, 0x12, 0x43, 0x75, 0x73, 0x74, 0x6f,
-	0x6d, 0x65, 0x72, 0x47, 0x65, 0x74, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x12, 0x0a,
-	0x04, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x6e, 0x61, 0x6d,
-	0x65, 0x22, 0x41, 0x0a, 0x14, 0x4c, 0x69, 0x73, 0x74, 0x43, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65,
-	0x72, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x29, 0x0a, 0x08, 0x43, 0x75, 0x73,
-	0x74, 0x6f, 0x6d, 0x65, 0x72, 0x18, 0x01, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x0d, 0x2e, 0x70, 0x75,
-	0x62, 0x2e, 0x43, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x52, 0x08, 0x43, 0x75, 0x73, 0x74,
-	0x6f, 0x6d, 0x65, 0x72, 0x22, 0x42, 0x0a, 0x15, 0x43, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72,
-	0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x29, 0x0a,
-	0x08, 0x43, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32,
+	0x6e, 0x61, 0x6c, 0x69, 0x74, 0x79, 0x22, 0x42, 0x0a, 0x15, 0x43, 0x75, 0x73, 0x74, 0x6f, 0x6d,
+	0x65, 0x72, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12,
+	0x29, 0x0a, 0x08, 0x43, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x18, 0x01, 0x20, 0x01, 0x28,
+	0x0b, 0x32, 0x0d, 0x2e, 0x70, 0x75, 0x62, 0x2e, 0x43, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72,
+	0x52, 0x08, 0x43, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x22, 0x3f, 0x0a, 0x12, 0x43, 0x75,
+	0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x41, 0x64, 0x64, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74,
+	0x12, 0x29, 0x0a, 0x08, 0x43, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x18, 0x01, 0x20, 0x01,
+	0x28, 0x0b, 0x32, 0x0d, 0x2e, 0x70, 0x75, 0x62, 0x2e, 0x43, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65,
+	0x72, 0x52, 0x08, 0x43, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x22, 0x28, 0x0a, 0x12, 0x43,
+	0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x47, 0x65, 0x74, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
+	0x74, 0x12, 0x12, 0x0a, 0x04, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52,
+	0x04, 0x6e, 0x61, 0x6d, 0x65, 0x22, 0x41, 0x0a, 0x14, 0x4c, 0x69, 0x73, 0x74, 0x43, 0x75, 0x73,
+	0x74, 0x6f, 0x6d, 0x65, 0x72, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x29, 0x0a,
+	0x08, 0x43, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x18, 0x01, 0x20, 0x03, 0x28, 0x0b, 0x32,
 	0x0d, 0x2e, 0x70, 0x75, 0x62, 0x2e, 0x43, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x52, 0x08,
 	0x43, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x32, 0xbc, 0x02, 0x0a, 0x07, 0x53, 0x65, 0x72,
 	0x76, 0x69, 0x63, 0x65, 0x12, 0x37, 0x0a, 0x0b, 0x43, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72,
@@ -409,25 +409,25 @@ func file_pub_proto_rawDescGZIP() []byte {
 var file_pub_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
 var file_pub_proto_goTypes = []interface{}{
 	(*Customer)(nil),              // 0: pub.Customer
-	(*CustomerAddRequest)(nil),    // 1: pub.CustomerAddRequest
-	(*CustomerGetRequest)(nil),    // 2: pub.CustomerGetRequest
-	(*ListCustomerResponse)(nil),  // 3: pub.ListCustomerResponse
-	(*CustomerUpdateRequest)(nil), // 4: pub.CustomerUpdateRequest
+	(*CustomerUpdateRequest)(nil), // 1: pub.CustomerUpdateRequest
+	(*CustomerAddRequest)(nil),    // 2: pub.CustomerAddRequest
+	(*CustomerGetRequest)(nil),    // 3: pub.CustomerGetRequest
+	(*ListCustomerResponse)(nil),  // 4: pub.ListCustomerResponse
 	(*empty.Empty)(nil),           // 5: google.protobuf.Empty
 }
 var file_pub_proto_depIdxs = []int32{
-	0, // 0: pub.CustomerAddRequest.Customer:type_name -> pub.Customer
-	0, // 1: pub.ListCustomerResponse.Customer:type_name -> pub.Customer
-	0, // 2: pub.CustomerUpdateRequest.Customer:type_name -> pub.Customer
-	1, // 3: pub.Service.CustomerAdd:input_type -> pub.CustomerAddRequest
+	0, // 0: pub.CustomerUpdateRequest.Customer:type_name -> pub.Customer
+	0, // 1: pub.CustomerAddRequest.Customer:type_name -> pub.Customer
+	0, // 2: pub.ListCustomerResponse.Customer:type_name -> pub.Customer
+	2, // 3: pub.Service.CustomerAdd:input_type -> pub.CustomerAddRequest
 	5, // 4: pub.Service.CustomerDelete:input_type -> google.protobuf.Empty
-	2, // 5: pub.Service.CustomerGet:input_type -> pub.CustomerGetRequest
+	3, // 5: pub.Service.CustomerGet:input_type -> pub.CustomerGetRequest
 	5, // 6: pub.Service.CustomerGetAll:input_type -> google.protobuf.Empty
-	4, // 7: pub.Service.CustomerUpdate:input_type -> pub.CustomerUpdateRequest
+	1, // 7: pub.Service.CustomerUpdate:input_type -> pub.CustomerUpdateRequest
 	0, // 8: pub.Service.CustomerAdd:output_type -> pub.Customer
 	0, // 9: pub.Service.CustomerDelete:output_type -> pub.Customer
 	0, // 10: pub.Service.CustomerGet:output_type -> pub.Customer
-	3, // 11: pub.Service.CustomerGetAll:output_type -> pub.ListCustomerResponse
+	4, // 11: pub.Service.CustomerGetAll:output_type -> pub.ListCustomerResponse
 	0, // 12: pub.Service.CustomerUpdate:output_type -> pub.Customer
 	8, // [8:13] is the sub-list for method output_type
 	3, // [3:8] is the sub-list for method input_type
@@ -455,7 +455,7 @@ func file_pub_proto_init() {
 			}
 		}
 		file_pub_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*CustomerAddRequest); i {
+			switch v := v.(*CustomerUpdateRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -467,7 +467,7 @@ func file_pub_proto_init() {
 			}
 		}
 		file_pub_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*CustomerGetRequest); i {
+			switch v := v.(*CustomerAddRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -479,7 +479,7 @@ func file_pub_proto_init() {
 			}
 		}
 		file_pub_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ListCustomerResponse); i {
+			switch v := v.(*CustomerGetRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -491,7 +491,7 @@ func file_pub_proto_init() {
 			}
 		}
 		file_pub_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*CustomerUpdateRequest); i {
+			switch v := v.(*ListCustomerResponse); i {
 			case 0:
 				return &v.state
 			case 1:
